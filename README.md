@@ -37,7 +37,26 @@ Run the app:
 
 bash
 streamlit run app.py
-Open your browser at http://localhost:8501/ to use the application.
+Open your browser at http://localhost:8501/unthinkable to use the application.
+
+Demo dataset includes 50+ product images with metadata.
+Images stored in static/data/images/.
+Mapping file: static/image_paths.json.
+Index file: static/index.faiss.
+
+Unthinkable_project/
+├── static/
+│   ├── data/
+│   │   └── images/          # Product images
+│   ├── image_paths.json     # Mapping file
+│   └── index.faiss          # Index file
+├── templates/
+│   └── index.html           # Web app template
+├── app.py                   # CLI app
+├── index.py                 # Indexing images
+├── serve.py                 # Web app
+├── README.md                # This file
+└── requirements.txt         # Python dependencies
 
 Approach Summary
 The project uses CLIP to extract embeddings from images, encoding visual information like color, shape, and texture into dense vectors. FAISS indexes these embeddings to allow fast similarity searches. When a user uploads an image or provides a URL, its embedding is computed and compared to the product database to retrieve the top visually similar items. The Streamlit frontend displays the uploaded image alongside results, including product metadata and similarity scores. Filters allow refinement of results. Error handling and loading states improve user experience, while the responsive design ensures usability on mobile devices. This approach demonstrates practical application of AI-powered image search for product matching in real-world scenarios.
