@@ -1,4 +1,4 @@
-# Unthinkable Project: Visual Product Build
+Visual Product Build
 
 ## Project Overview
 This repository contains a **Visual Product Build** web application that leverages **OpenAI's CLIP (Contrastive Language-Image Pretraining) model** and **FAISS (Facebook AI Similarity Search)** to enable fast and accurate visual similarity search. Users can upload an image file or provide an image URL to find visually similar products from a catalog of 50+ items. The app displays the uploaded image alongside the top matches, including metadata such as product name and category.
